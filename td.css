@@ -1,0 +1,47 @@
+
+.tdButton {
+	display: block;
+	background-color: #E49849;
+	font-size: 1.2em;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 8px;
+}	
+
+.glow1 {
+	background-color: #E49849;
+	border: 4px solid #FF8609;
+}
+
+.glow0 {
+	background-color: #404040;
+	border: 4px solid #7D7676;
+}
+
+.glow2 {
+	background-color: #8CC767;
+	border: 4px solid #529827;
+	
+}
+
+.tdButton {
+	color: #FBF3ED;
+	font-size: 1.1em;
+	width: 100%;
+}
+
+.glow1_ {
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px yellow , 0 0 70px yellow , 0 0 80px yellow , 0 0 100px yellow ;
+}
+
+.glow2_ {
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #E7F9DC, 0 0 70px #E7F9DC, 0 0 80px #E7F9DC, 0 0 100px #E7F9DC ;
+}
+
+
+.glow0_  {
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px gray, 0 0 70px gray, 0 0 80px gray, 0 0 100px gray ;
+}
+
+
+

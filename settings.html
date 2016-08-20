@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Tube Dancing</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" />
+    <link rel="stylesheet" href="td.css?v=2.7" type="text/css" />
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="td.js?v=2.9"></script>
+    <script>
+    	function applySettings() {
+    		 var lag = $("#lagComp").val();
+    		 var eff = $("#effects").val()=="Yes" ? "1" : "0";
+    		 window.location.href = "main.html?u=" + encodeURIComponent("http://tubedancing.com/?l=" + lag.toString() + "&e=" + eff);
+    	}
+    </script>
+</head>
+
+<body style="color: white; background-color: black">
+ 	<div class="container">
+      <div class="row" >
+        <div class="col-xs-12" >
+        	<center><img src="td.png" border=0></center>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <div class="col-xs-12">
+			<form role="form" style="margin-left: 10px; width: 90%">
+			  <div class="form-group">
+			    <label for="lagComp">Lag Compensation</label>
+			    <p>If you notice the arrows lagging a bit, try changing this setting. In micro-seconds, a value between 0 and 5.</p>
+			    <input class="form-control" id="lagComp" style="width: 50%">
+			  </div>
+			  <div class="form-group">
+			    <label for="eff">Effects</label>
+			    <p>If it slows down on jumps and lunges because of the screen effects, then set this to No.</p>
+			    <select class="form-control" id="effects" style="width: 50%">
+			    	<option id="Yes" selected>Yes</option>
+			    	<option id="No">No</option>
+			    </select>
+			  </div>
+			</form>
+        </div>
+       </div>
+	 <div class="row">
+       <div class="col-xs-12" style="margin-top: 20px; text-align: left" >
+        	<button onclick="javascript:applySettings()" class="tdButton glow1">Apply Settings</button>
+       </div>
+     </div>
+           
+    </div>
+</body>
