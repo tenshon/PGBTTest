@@ -25,7 +25,17 @@
     	    window.location.href = 'main.html?u=' + encodeURIComponent(url);
     	}
 	    function printReceipt(url) {
-    	    alert('print receipt');
+
+        bluetoothSerial.list(function(devices) {
+        	alert('listing devices');
+            devices.forEach(function(device) {
+                var data = "something \r\n\r\n";
+                alert('sending to ' + device.address);
+                bluetoothSerial.connect(device.address, connectSuccess, connectFailure);
+                alert('connect complete');
+                bluetoothSerial.write(data, success, failure);
+                alert('send complete');            })
+        }, connectFailure);
     	}
     	
 $(document).ready(function() {
