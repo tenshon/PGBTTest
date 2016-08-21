@@ -27,8 +27,9 @@
         console.log("Error: "+message+" in "+url+" at line "+lineNumber);
     }
     	    function opentd(url) {
-    	    window.location.href = 'main.html?u=' + encodeURIComponent(url);
-    	}
+    	    	window.location.href = 'main.html?u=' + encodeURIComponent(url);
+    		}
+    		
 	    function printReceipt(url) {
 
         bluetoothSerial.list(function(devices) {
