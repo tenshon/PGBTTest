@@ -31,18 +31,25 @@
     		}
     		
 	    function printReceipt(url) {
-
-        bluetoothSerial.list(function(devices) {
-        	alert('listing devices');
-            devices.forEach(function(device) {
-                var data = "something \r\n\r\n";
-                alert('sending to ' + device.address);
-                bluetoothSerial.connect(device.address, connectSuccess, connectFailure);
-                alert('connect complete');
-                bluetoothSerial.write(data, success, failure);
-                alert('send complete');            })
-        }, connectFailure);
-    	}
+	
+	        bluetoothSerial.list(function(devices) {
+	        	alert('listing devices');
+	            devices.forEach(function(device) {
+	                var data = "something \r\n\r\n";
+	                alert('sending to ' + device.address);
+	                bluetoothSerial.connect(device.address, function() {
+		                alert('connect complete');
+		                bluetoothSerial.write(data, function() { alert('send complete!') }, function() { alert('send error!'); });
+	                }, connectFailure);
+	            }
+	          )
+	        }, connectFailure);
+       }
+       
+      function connectFailure()
+      {
+      	alert("connect failure!");
+      }
     	
     function onDeviceReady() {
     	console.log("device ready!");
