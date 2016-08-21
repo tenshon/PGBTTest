@@ -23,7 +23,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-	    function opentd(url) {
+    window.onerror = function(message, url, lineNumber) {
+        console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+    }
+    	    function opentd(url) {
     	    window.location.href = 'main.html?u=' + encodeURIComponent(url);
     	}
 	    function printReceipt(url) {
