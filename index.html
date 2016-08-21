@@ -38,12 +38,12 @@
 	    function printReceipt(url) {
 	
 	        bluetoothSerial.list(function(devices) {
-	        	alert('listing devices');
+	        	//alert('listing devices');
 	            devices.forEach(function(device) {
-	                var data = "something \r\n\r\n";
-	                alert('sending to ' + device.address);
+	                var data = "DUCK TOURS\r\n\r\n\r\n\r\nExample receipt:\r\n\r\n\r\n\r\n  Some Package     150.00\r\n\r\n\r\nTHANK YOU FOR YOUR BUSINESS!\r\n\r\n\r\n";
+	                //alert('sending to ' + device.address);
 	                bluetoothSerial.connect(device.address, function() {
-		                alert('connect complete');
+		                //alert('connect complete');
 		                bluetoothSerial.write(data, function() { alert('send complete!') }, function() { alert('send error!'); });
 	                }, connectFailure);
 	            }
