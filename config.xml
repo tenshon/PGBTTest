@@ -11,7 +11,7 @@
 	    <preference name="stay-in-webview" value="true" />         
 	    
 	    <plugin name="cordova-plugin-whitelist" version="1" />
-		<plugin name="com.megster.cordova.bluetoothserial" spec="0.2.2" />
+		<plugin name="com.megster.cordova.bluetoothserial" spec="0.2.2" source="pgb" />
 	    <allow-intent href="http://*/*" />
 	    <allow-intent href="https://*/*" />
 	    <allow-intent href="tel:*" />
