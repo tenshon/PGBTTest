@@ -30,6 +30,11 @@
     	    	window.location.href = 'main.html?u=' + encodeURIComponent(url);
     		}
     		
+      function connectFailure(err)
+      {
+      	alert("connect failure! " + err);
+      }
+
 	    function printReceipt(url) {
 	
 	        bluetoothSerial.list(function(devices) {
@@ -46,10 +51,6 @@
 	        }, connectFailure);
        }
        
-      function connectFailure()
-      {
-      	alert("connect failure!");
-      }
     	
     function onDeviceReady() {
     	console.log("device ready!");
