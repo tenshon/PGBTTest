@@ -44,6 +44,19 @@
         }, connectFailure);
     	}
     	
+    function onDeviceReady() {
+        app.receivedEvent('deviceready');
+        
+        // Test Bluetooth Serial Plugin
+        bluetoothSerial.isEnabled(
+            function() { 
+                alert("Bluetooth is enabled");
+            },
+            function() { 
+                alert("Bluetooth is *not* enabled");
+            }
+        );    
+        
 $(document).ready(function() {
 
     $("#testco").click(function() {
@@ -68,6 +81,8 @@ $(document).ready(function() {
     $("#deco").click(function() {
         bluetoothSerial.disconnect(sucessdeco, faildeco);
     });
+    
+    document.addEventListener('deviceready', onDeviceReady, false);
 
 });    	
     </script>
